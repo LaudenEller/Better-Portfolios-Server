@@ -4,7 +4,9 @@ from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
-from rest_framework import status
+from rest_framework  import status
+
+# HELP: Why are my imports not working?
 
 
 @api_view(['POST'])
@@ -42,8 +44,10 @@ def register_user(request):
 
     # TODO: this is only adding the username and password, if you want to add in more user fields like first and last name update this code
     new_user = User.objects.create_user(
-        username=request.data['username'],
+        name=request.data['name'],
+        email=request.data['email'],
         password=request.data['password'],
+        
     )
 
     # TODO: If you're using a model with a 1 to 1 relationship to the django user, create that object here
