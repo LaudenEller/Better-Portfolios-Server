@@ -1,0 +1,16 @@
+[
+    {
+        "model": "invEStiGuideAPI.AssetClass",
+        "pk": 1,
+        "fields": {
+            "asset_class": "fixed_income"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.AssetClass",
+        "pk": 2,
+        "fields": {
+            "asset_class": "equity"
+        }
+    }
+]
