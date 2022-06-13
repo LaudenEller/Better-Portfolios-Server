@@ -45,7 +45,7 @@ def register_user(request):
     new_user = User.objects.create_user(
         username=request.data['username'],
         password=request.data['password'], # HELP Isn't there a way to encrypt the password of a user?
-        email = request.data['email'] # HELP: Isn't there a way to create a check on an email property to confirm it uses an email format? Is there an email field type in django models?
+        email = request.data['email'], # HELP: Isn't there a way to create a check on an email property to confirm it uses an email format? Is there an email field type in django models?
         first_name=request.data['first_name'],
         last_name=request.data['last_name']
     )
