@@ -17,9 +17,8 @@ def login_user(request):
     '''
     username = request.data['username']
     password = request.data['password']
-    email = request.data['email']
 
-    authenticated_user = authenticate(username=username, password=password, email=email)
+    authenticated_user = authenticate(username=username, password=password)
 
     if authenticated_user is not None:
         token = Token.objects.get(user=authenticated_user)

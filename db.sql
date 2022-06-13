@@ -1,0 +1,1 @@
+INSERT INTO 'invEStiGuideAPI_country' VALUES (null, "Global");

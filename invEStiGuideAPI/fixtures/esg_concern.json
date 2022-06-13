@@ -1,0 +1,58 @@
+[
+    {
+        "model": "invEStiGuideAPI.ESG_Concern",
+        "pk": 1,
+        "fields": {
+            "concern": "Corporate Structure"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.ESG_Concern",
+        "pk": 2,
+        "fields": {
+            "concern": "Stakeholder Power"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.ESG_Concern",
+        "pk": 3,
+        "fields": {
+            "concern": "Gambling"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.ESG_Concern",
+        "pk": 4,
+        "fields": {
+            "concern": "Guns & Ammunition"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.ESG_Concern",
+        "pk": 5,
+        "fields": {
+            "concern": "Tobacco"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.ESG_Concern",
+        "pk": 6,
+        "fields": {
+            "concern": "Carbon Sequestration"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.ESG_Concern",
+        "pk": 7,
+        "fields": {
+            "concern": "Location Risks"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.ESG_Concern",
+        "pk": 8,
+        "fields": {
+            "concern": "Renewable Energy"
+        }
+    }
+]
