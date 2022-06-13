@@ -1,41 +1,41 @@
 [
     {
-        "model": "invEStiGuideAPI.industry",
+        "model": "invEStiGuideAPI.Industry",
         "pk": 1,
         "fields": {
             "industry": "Agriculture"
         }
     },
     {
-        "model": "invEStiGuideAPI.industry",
+        "model": "invEStiGuideAPI.Industry",
         "pk": 2,
         "fields": {
             "industry": "Energy & Power"
         }
     },
     {
-        "model": "invEStiGuideAPI.industry",
+        "model": "invEStiGuideAPI.Industry",
         "pk": 3,
         "fields": {
             "industry": "Manufacturing"
         }
     },
     {
-        "model": "invEStiGuideAPI.industry",
+        "model": "invEStiGuideAPI.Industry",
         "pk": 4,
         "fields": {
             "industry": "Real Estate"
         }
     },
     {
-        "model": "invEStiGuideAPI.industry",
+        "model": "invEStiGuideAPI.Industry",
         "pk": 5,
         "fields": {
             "industry": "Finance"
         }
     },
     {
-        "model": "invEStiGuideAPI.industry",
+        "model": "invEStiGuideAPI.Industry",
         "pk": 6,
         "fields": {
             "industry": "Technology"

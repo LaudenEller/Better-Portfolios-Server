@@ -1,6 +1,6 @@
 [
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 1,
         "fields": {
             "name": "Al Jazeera_Afghanistan",
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 2,
         "fields": {
             "name": "IBM_Algeria",
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 3,
         "fields": {
             "name": "Telemondo_Argentina",
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 4,
         "fields": {
             "name": "Apple",
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 5,
         "fields": {
             "name": "Alphabet Inc",
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 6,
         "fields": {
             "name": "US Tresasury",
@@ -54,7 +54,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 7,
         "fields": {
             "name": "Nestle_India",
@@ -63,7 +63,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 8,
         "fields": {
             "name": "Vangaurd",
@@ -72,7 +72,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 9,
         "fields": {
             "name": "Charles Schwab",
@@ -81,7 +81,7 @@
         }
     },
     {
-        "model": "invEStiGuideAPI.issuer",
+        "model": "invEStiGuideAPI.Issuer",
         "pk": 10,
         "fields": {
             "name": "Black Rock",

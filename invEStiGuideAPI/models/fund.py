@@ -15,5 +15,5 @@ class Fund(models.Model):
     esg_concern = models.ManyToManyField(ESG_Concern, related_name="fund")
     esg_rating = models.IntegerField()
     asset_rating = models.CharField(max_length=200)
-    image_url = models.CharField(max_length=200)
+    image_url = models.TextField()
     is_index = models.BooleanField()
