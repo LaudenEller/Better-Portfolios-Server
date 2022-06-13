@@ -6,11 +6,9 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework  import status
 
-# HELP: Why are my imports not working?
-
 
 @api_view(['POST'])
-@permission_classes([AllowAny])
+@permission_classes([AllowAny]) # HELP: What does this do?
 def login_user(request):
     '''Handles the authentication of a user
 
@@ -19,8 +17,9 @@ def login_user(request):
     '''
     username = request.data['username']
     password = request.data['password']
+    email = request.data['email']
 
-    authenticated_user = authenticate(username=username, password=password)
+    authenticated_user = authenticate(username=username, password=password, email=email)
 
     if authenticated_user is not None:
         token = Token.objects.get(user=authenticated_user)
@@ -44,13 +43,12 @@ def register_user(request):
 
     # TODO: this is only adding the username and password, if you want to add in more user fields like first and last name update this code
     new_user = User.objects.create_user(
-        name=request.data['name'],
-        email=request.data['email'],
-        password=request.data['password'],
-        
+        username=request.data['username'],
+        password=request.data['password'], # HELP Isn't there a way to encrypt the password of a user?
+        email = request.data['email'] # HELP: Isn't there a way to create a check on an email property to confirm it uses an email format? Is there an email field type in django models?
+        first_name=request.data['first_name'],
+        last_name=request.data['last_name']
     )
-
-    # TODO: If you're using a model with a 1 to 1 relationship to the django user, create that object here
 
     
     token = Token.objects.create(user=new_user)
