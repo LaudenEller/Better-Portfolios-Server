@@ -6,7 +6,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework  import status
 
-
+#  HELP: How is this decorator working? What class is login_user a method of...?
 @api_view(['POST'])
 @permission_classes([AllowAny]) # HELP: What does this do?
 def login_user(request):
