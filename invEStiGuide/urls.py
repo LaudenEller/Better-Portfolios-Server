@@ -20,11 +20,13 @@ from invEStiGuideAPI.views.fund import FundView
 from rest_framework import routers
 from django.conf.urls import include
 
+from invEStiGuideAPI.views.user import UserView
+
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'funds', FundView, 'fund')
 # router.register(r'favorites', FavoriteView, 'favorite')
 # router.register(r'recommendations', RecommendationView, 'recommendation')
-# router.register(r'user', UserView, 'user')
+router.register(r'users', UserView, 'user')
 # router.register(r'watched', WatchedView, 'watched_securities')
 
 urlpatterns = [
