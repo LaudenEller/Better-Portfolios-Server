@@ -2,8 +2,6 @@
 
 # create a recommendation
 
-# get a recommendation
-
 # get all recommendations
 
 # delete a recommendation
