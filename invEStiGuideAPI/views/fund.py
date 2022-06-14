@@ -3,6 +3,8 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from invEStiGuideAPI.models.fund import Fund
 from invEStiGuideAPI.serializers.fund_serializer import FundSerializer
+from django.core.exceptions import ObjectDoesNotExist
+from rest_framework import status
 
 class FundView(ViewSet):
     
@@ -33,3 +35,9 @@ class FundView(ViewSet):
             Response -- JSON serialized fund
         """
         
+        try:
+            fund = Fund.objects.get(pk=pk)
+            serializer = FundSerializer(fund)
+            return Response(serializer.data)
+        except ObjectDoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
