@@ -19,12 +19,13 @@ from invEStiGuideAPI.views import register_user, login_user
 from invEStiGuideAPI.views.fund import FundView
 from rest_framework import routers
 from django.conf.urls import include
+from invEStiGuideAPI.views.issuer import IssuerView
 
 from invEStiGuideAPI.views.user import UserView
 
 router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'funds', FundView, 'fund')
-# router.register(r'favorites', FavoriteView, 'favorite')
+router.register(r'funds', FundView, 'fund') # HELP What is the purpose of the string inside that tuple?, Does it allow the HTTP String to be singular
+router.register(r'issuers', IssuerView, 'issuer')
 # router.register(r'recommendations', RecommendationView, 'recommendation')
 router.register(r'users', UserView, 'user')
 # router.register(r'watched', WatchedView, 'watched_securities')

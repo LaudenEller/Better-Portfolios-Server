@@ -4,4 +4,6 @@
 
 # get all recommendations
 
+# Get all current user's recommendations
+
 # delete a recommendation
