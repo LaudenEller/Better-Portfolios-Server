@@ -17,10 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from invEStiGuideAPI.views import register_user, login_user
 from invEStiGuideAPI.views.fund import FundView
+from rest_framework import routers
+from django.conf.urls import include
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'funds', FundView, 'fund')
+# router.register(r'favorites', FavoriteView, 'favorite')
+# router.register(r'recommendations', RecommendationView, 'recommendation')
+# router.register(r'user', UserView, 'user')
+# router.register(r'watched', WatchedView, 'watched_securities')
 
 urlpatterns = [
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('register', register_user),
     path('login', login_user),
-    path('', FundView.as_view({'get': 'list'}), name='home'),
+    # path('', FundView.as_view({'get': 'list'}), name='home'),
 ]
