@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from invEStiGuideAPI.views import register_user, login_user
+from invEStiGuideAPI.views.fund import FundView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register', register_user),
     path('login', login_user),
+    path('', FundView.as_view({'get': 'list'}), name='home'),
 ]
