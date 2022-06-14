@@ -39,3 +39,14 @@ class UserView(ViewSet):
 
 
 # update a user
+    def update(self, request, pk):
+        """Handles PUT requests
+        
+        Returns:
+            Response -- 204 No Content status code
+        """
+        user = User.objects.get(pk=pk)
+        serializer = UserSerializer(user, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response({'message': 'Profile updated'}, status=status.HTTP_204_NO_CONTENT)
