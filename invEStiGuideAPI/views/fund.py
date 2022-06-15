@@ -23,27 +23,37 @@ class FundView(ViewSet):
             Response -- JSON serialized list of funds
         """
 
-        # add query parameters for 
-        #  asset_classes
-        asset_class = request.query_params.get('asset_class', None)
+        # add query parameters for:
+        #  asset_classes // query string = "/funds?assetclass=<asset_class id>"
+        asset_class = request.query_params.get('assetclass', None)
         if asset_class is not None:
             funds = Fund.objects.filter(asset_class_id=asset_class)
                     
-        # countries
+        # countries // query string = "/funds?country=<country id>"
         country = request.query_params.get('country', None)
         if country is not None:
             funds = Fund.objects.filter(country_id=country)
-        # industries
+            
+        # industries // query string = "/funds?industry=<industry id>"
         industry = request.query_params.get('industry', None)
         if industry is not None:
             funds = Fund.objects.filter(industry_id=industry)
-        # issuers
+            
+        # issuers // query string = "/funds?issuer=<issuer id>"
         issuer = request.query_params.get('issuer', None)
         if issuer is not None:
             funds = Fund.objects.filter(issuer_id=issuer)
-        # esg_concerns
-    
-        # search for a fund
+            
+        # esg_concerns // query string = "/funds?esg=<esg_concern id>,<esg_concern id>,<esg_concern id>"
+            # Returns all funds with a matching esg_concern
+        esg = request.query_params.get('esg', None)
+        if esg is not None:
+            esg = self.request.GET.get("esg", "")
+            esg_values = esg.split(",")
+            funds = Fund.objects.filter(esg_concern__in=esg_values)
+            
+        # search for a fund // query string = "/funds?name=<string>"
+        #   Returns funds who's name begins with search text
         search_text_name = self.request.query_params.get('name', None)
         if search_text_name is not None:
                 funds = Fund.objects.filter(
