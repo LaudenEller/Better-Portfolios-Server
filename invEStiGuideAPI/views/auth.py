@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from rest_framework  import status
 
 #  HELP: How is this decorator working? What class is login_user a method of...?
-@api_view(['POST'])
-@permission_classes([AllowAny]) # HELP: What does this do?
+@api_view(['POST']) # Only accepts POST requests to this method
+@permission_classes([AllowAny]) # HELP: What does this do? ANSW: Got to do with IP permissions (security)
 def login_user(request):
     '''Handles the authentication of a user
 
@@ -22,7 +22,6 @@ def login_user(request):
 
     if authenticated_user is not None:
         token = Token.objects.get(user=authenticated_user)
-        # TODO: If you need to return more information to the client, update the data dict
         data = {
             'valid': True,
             'token': token.key
@@ -39,19 +38,16 @@ def register_user(request):
     Method arguments:
       request -- The full HTTP request object
     '''
-
-    # TODO: this is only adding the username and password, if you want to add in more user fields like first and last name update this code
+    
     new_user = User.objects.create_user(
         username=request.data['username'],
-        password=request.data['password'], # HELP Isn't there a way to encrypt the password of a user?
-        email = request.data['email'], # HELP: Isn't there a way to create a check on an email property to confirm it uses an email format? Is there an email field type in django models?
+        password=request.data['password'],
+        email = request.data['email'],
         first_name=request.data['first_name'],
         last_name=request.data['last_name']
     )
-
     
     token = Token.objects.create(user=new_user)
-    # TODO: If you need to send the client more information update the data dict
-    
     data = { 'token': token.key }
+    
     return Response(data, status=status.HTTP_201_CREATED)
