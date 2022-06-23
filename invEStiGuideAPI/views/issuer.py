@@ -43,6 +43,10 @@ class IssuerView(ViewSet):
         
         try:
             issuers = Issuer.objects.filter(favorite__user_id=request.auth.user.id)
+            for issuer in issuers:
+                funds = Fund.objects.filter(issuer__id = issuer.id)
+                fundSerializer = FundSerializer(funds, many=True)
+                issuer.funds = fundSerializer.data
             serializer = IssuerSerializer(issuers, many=True)
             return Response(serializer.data)
         except Issuer.DoesNotExist as ex:
