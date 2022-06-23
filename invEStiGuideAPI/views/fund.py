@@ -120,8 +120,7 @@ class FundView(ViewSet):
         """Handles requests for the current user's recommendation list"""
         
         recs = Recommendation.objects.filter(
-            Q(recommendee=request.auth.user) |
-            Q(recommender=request.auth.user))
+            Q(recommendee=request.auth.user))
         serializer = RecommendationSerializer(recs, many=True)
         return Response(serializer.data)
     
