@@ -1,5 +1,3 @@
-# TODO: combine watch/unwatch into one cutsom action called watch that handles POST and DELETE methods
-
 """View module for handling requests for funds"""
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -24,8 +22,6 @@ class FundView(ViewSet):
         Returns:
             Response -- JSON serialized list of funds
         """
-
-        # add query parameters for:
         
         #  asset_classes // query string = "/funds?assetclass=<asset_class id>"
         funds = Fund.objects.all()

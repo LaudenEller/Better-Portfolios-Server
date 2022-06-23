@@ -28,7 +28,7 @@ from invEStiGuideAPI.views.recommendation import RecView
 from invEStiGuideAPI.views.user import UserView
 
 router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'funds', FundView, 'fund') # HELP What is the purpose of the string inside that tuple?, Does it allow the HTTP String to be singular
+router.register(r'funds', FundView, 'fund')
 router.register(r'issuers', IssuerView, 'issuer')
 router.register(r'assetclasses', AssetView, 'assetClass')
 router.register(r'industries', IndustryView, 'industry')
@@ -36,12 +36,10 @@ router.register(r'users', UserView, 'user')
 router.register(r'esgconcerns', EsgView, 'esgconcern')
 router.register(r'countries', CountryView, 'country')
 router.register(r'recs', RecView, 'recommendation')
-# router.register(r'watched', WatchedView, 'watched_securities')
 
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('register', register_user),
     path('login', login_user),
-    # path('', FundView.as_view({'get': 'list'}), name='home'),
 ]
