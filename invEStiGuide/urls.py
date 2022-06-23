@@ -24,6 +24,7 @@ from django.conf.urls import include
 from invEStiGuideAPI.views.industry import IndustryView
 from invEStiGuideAPI.views.issuer import IssuerView
 from invEStiGuideAPI.views.esgConcern import EsgView
+from invEStiGuideAPI.views.recommendation import RecView
 from invEStiGuideAPI.views.user import UserView
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -34,6 +35,7 @@ router.register(r'industries', IndustryView, 'industry')
 router.register(r'users', UserView, 'user')
 router.register(r'esgconcerns', EsgView, 'esgconcern')
 router.register(r'countries', CountryView, 'country')
+router.register(r'recs', RecView, 'recommendation')
 # router.register(r'watched', WatchedView, 'watched_securities')
 
 urlpatterns = [
