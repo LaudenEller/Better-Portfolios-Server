@@ -158,5 +158,197 @@
             "country": 13,
             "issuer": 9
         }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 11,
+        "fields": {
+            "name": "Bloomberg KSCI Green Bonds",
+            "esg_rating": 10,
+            "asset_rating": "AAA",
+            "is_index": "True",
+            "image_url": "https://data.bloomberglp.com/company/sites/51/2019/08/og-image-generic-lp.png",
+            "esg_concern": [6, 8],
+            "asset_class": 1,
+            "industry": 2,
+            "country": 13,
+            "issuer": 11
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 12,
+        "fields": {
+            "name": "MSCI Women's Leadership",
+            "esg_rating": 10,
+            "asset_rating": "BB",
+            "is_index": "True",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/MSCI_logo_2019.png",
+            "esg_concern": [2, 1],
+            "asset_class": 2,
+            "industry": 6,
+            "country": 11,
+            "issuer": 12
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 13,
+        "fields": {
+            "name": "MSCI Sustainable Impact",
+            "esg_rating": 10,
+            "asset_rating": "AA",
+            "is_index": "True",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/MSCI_logo_2019.png",
+            "esg_concern": [8, 6, 2],
+            "asset_class": 2,
+            "industry": 2,
+            "country": 11,
+            "issuer": 12
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 14,
+        "fields": {
+            "name": "MSCI Global Environmental",
+            "esg_rating": 10,
+            "asset_rating": "AAA",
+            "is_index": "True",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/MSCI_logo_2019.png",
+            "esg_concern": [8, 6, 2, 1],
+            "asset_class": 2,
+            "industry": 2,
+            "country": 11,
+            "issuer": 12
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 15,
+        "fields": {
+            "name": "Schwab Large Cap ETF",
+            "esg_rating": -4,
+            "asset_rating": "AAA",
+            "is_index": "False",
+            "image_url": "data:image/png;base64,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",
+            "esg_concern": [1, 2, 3, 4, 5, 7],
+            "asset_class": 2,
+            "industry": 5,
+            "country": 11,
+            "issuer": 9
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 16,
+        "fields": {
+            "name": "Schwab 1000 ETF",
+            "esg_rating": 4,
+            "asset_rating": "AAA",
+            "is_index": "False",
+            "image_url": "data:image/png;base64,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",
+            "esg_concern": [5, 6, 7],
+            "asset_class": 2,
+            "industry": 3,
+            "country": 11,
+            "issuer": 9
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 17,
+        "fields": {
+            "name": "Invesco FTSE RASI US 1000 ETF",
+            "esg_rating": 3,
+            "asset_rating": "AAA",
+            "is_index": "False",
+            "image_url": "https://iconape.com/wp-content/files/do/69589/svg/invesco.svg",
+            "esg_concern": [4, 1, 8],
+            "asset_class": 1,
+            "industry": 5,
+            "country": 12,
+            "issuer": 10
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 18,
+        "fields": {
+            "name": "iShares ESG Aware MSCI USA Small-Cap ETF",
+            "esg_rating": 10,
+            "asset_rating": "AAA",
+            "is_index": "False",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/MSCI_logo_2019.png",
+            "asset_class": 2,
+            "esg_concern": [8, 7, 1],
+            "industry": 2,
+            "country": 11,
+            "issuer": 12
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 19,
+        "fields": {
+            "name": "Vanguard Small-Cap Growth ETF",
+            "esg_rating": 2,
+            "asset_rating": "AAA",
+            "is_index": "False",
+            "image_url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIMA3QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABQYDBAECBwj/xAA6EAABAwMDAQUGAwgBBQAAAAABAAIDBAURBhIhMQcTQVFhFCIyUnGBI6GxFRZCYoKRwfCyNURGhNH/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAgMBBAX/xAAkEQEAAgIBBAICAwAAAAAAAAAAAQIDERIEITFBFFGxwQUTI//aAAwDAQACEQMRAD8A9xREQEREBERAREQEREBERARFre2xmpdAGuJa0OLgOOSRj8ig2UXVrw4ZaQQuyAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICLg9FB3t9WaunZTsgezdkb3OBadpz4FBLTSgB2XhkbfjeTgD0VaYxrrtK6K4y90yON2x1RxgOdxnr4f2UpKQ+Dae7dHjlrSdrj5cjp6KCoKCB17rZDbaR8Hs8DBH3TctwZDnpjn0HgEFqbNG8B7htJHDm85+4XL6kQxOke8OY0ZJ6FcMqGFu0ROAHGMcBYa2SRkDn01LFK/wCV7tv3ztKDWt99p6mqliFVDJ+IQ1rT7zAGg8jy5PKmQcjg5VTsNVWSz1hpbbCxrKoxyO9q8mtzwG84VjjkDckDDPFvi31+iDaRcAjA5XKAiIgIiICIiAiIgIiICIiAiIgIiICFFim5G35jg48vFB3JyqxdbbBNead8UYy18j3++4bzs9D6hSwfUwwlzT3kQJByMvZg4z6j8/qqhPc5I9R0EDr1TRsfBPKXvawObjb1yRjqfDwQTddW0drbFTujqIw4c7IHvZj1cAec+a1bffbb+2bq4zPMYhg4ZE4kEGXgADqMBdobjQSDDrlBUtA3OlZKwlmc8FoPDQcc/wB8dVG6SneL5fpqyEQRSPYyKQSMc2QtLy4DByRh4QW23VUNxpRUU0c2zJH4sLoifVu4A/4WWokcYtkZ37jgjHI/3osFLfLfWS9xS11I+fGe7ZO1zseYaDkhRVxoLNVyPr30UPtDGnvKh8YEg4xyev38unmg3LOSxk8sYIc6okDmnx54Uodp/EZwB1x1b6qkaJtFrvOmo5p4o6xjpD3gI3ZcAM4J9cq6UdNBT0scNHHFAyH3WsjZtaB5YCDKx/d8Ee71wP1HotgEHotYEfCQQ3I/pP8A8QOMDsOPuHx8kG0i4acjIOVygIiICIiAiIgIiICIiAiIgIiICxv+Jh8jhZFp1FHLIHbauUA87NrCP0z+aCJaw1cVZumnb3Va/YYpi3PTjyP36KKbZ436iij9rqzIaOTe8y8u9+Pxx0UV++MVtqamKsd3RfM7a11O7g+852djn4wPTwXS2a4ss16bUz1zIIjRbQ8MkPMj27clzB4DjjHCCeprPRQSVDHN392WBneOIwS0njGPmAXTTNkoJ6WrLKGIgVkoB7xwA94HgePP0Wh+9umxcri517oGO70BgknDTkMwRyRj4cfUqb0NcqGroK6SlrKeVnt85Bjla4YLuOQUHar0pQTxMidEacg8SwTSMJ/lc5paSPTOPvyooWGI08c8NfWNwCI5fa6jJHPBBf0J/Xqrq+ogAO+WMDxy4YVPt9wpm2WmbLUwj8AZaXZxk4/VBj0vp2SfTFrkFdVNElHE5zW1lQ1pJbk8CQYzlTdksVJaHPnhkqpJngNkM9TLJtHoHuOPr4/ktTSV5ttNoyyOqa6mjP7OhcQ6VoPDBnqVq1d4q9Tb4NNVDKeJkphnrHx7nDABc1jCQc8jl2ByCAeqCy3CupKRre/mDZHZDGNG57/MBo5K16WasrYRiN1LG74RJh0hb5+IHpnJPoo3TVnFBTyNc+SoqZJn9/PMQZJMOIG4gDgY4HQeCs0cYYPM+JQdKWBlPHsZnHiXEkk+ZJWZEQEREBERAREQEREBERARa9fOaWlknbDJMY2l3dx43O9BkgKq2TtCtF4ucNvgjq45ZiQwytABIGccFNtK4r3ibVjcQuSLSutaLbbp6x0UkrIGl7mx4zgdepC0tL6hp9R0UlXSQzxxMkMeZgBuOOowSieFuPL0mkK4yiJeS9oNtu9NqkTWPT9TX08kIlk7t21jZckcYPpkjHj6lQQk1lnJ0bVk5Bz3vj/EfuOMdB1C92XPCDwdr9YD/wAKrC0ADHfdQPh8PDz6nxXLZNaNPGkK0Hg7hLjn+I4/mHGP4eoXu+U49EHhQl1lgNdo+vLOAW+0H4R8I+3n4+KxtdrIHP7mVQcMHiQfEfiP9Q4x4eC944Tj0QeEd3rGdrYIdHSwTFwbFUTP3CHqGk/TJ5XrOkNL0mm7KygjPfSlxlqKg8Omkd8Tif8AeAp/IRBjhgjhBEYxlxcfUk5/ysq4yuCg7IojUd9ptP0Ara2Kd8G8MJiaDtJ4GQSFo2fV9vu9BPW0sdQ2OKTuy17RuJ27uMHy5RcY7zXlrssqLUt9WythbNFuAPg4YPp+RC20QIiICIiAiIgIiIOr+QvANU0cumdZzmny0RVAq6fHyl27b+rfovoArzTtltDpaWju0LSTCTFNj5XfCT9Dx/UptHZ7v4/JFc3G3i3ZJdpF8Y3Q3fUr8m5BjI9vXY4Zdj+kEfdaUF1uGkLXbLLbLFNcqoUomq3Rbtsb3ckcNOTnPl0CqOlXVGo7pp6yyjdTW50krj5sB3D+3ut+6larXWoL5fWWyxOgo2TzGOFzmAuI+ZxOQOATgD0XIn29M9PNf8tb1uZ/ELHprtGjul0bbLlbZKGqe4sad+5u75XZALT9l11dr+p05en2/wDZcU7Qxr2y+0lvBz/DsP6rz0QVFv15FDcKkT1MVdH3s5yNziWnPP1Un2uY/e3/ANVn6lOU6lfw8P8AfWIjcTG0/U9qk0E8bjYZ20jwCySWQxukb4uaC3BH3/srPeNa2y2WGkuuHztrG5p4WYDn+ec9MeKqPa21rLTYMNHAd/xao662T27s3sdxZPGx1FG9u2V4aHte7kA/N7owm5jbOuDBetL61EzpKz9qF1hpoqqTTgZSzk9zK+d21+PI7PRZJu0e+w26O4S6ZjZRSnDJ/a8td5dAq3NNfNT6Ys9mo7LM6Oic3FQ0ENk2tLGnJwBweeeqmtV2Waw9mVFQVEgfKyra+QtOQ0uLjgenOE3PlpOLp62rWaxuZ159LNaNYVNw0hW332CJslM5/wCB35w4NAPxbeOvkuuh9aS6oq6qGS3spRDG14LZi/OTj5RhVfS1dSw9mN6hlnjbJmUbC7klzRjhR3ZvdG2Wnv8AcXRmX2ekY4MHG4lxAGfqQkWnsyt0lOGTVe8TqFrvOvbtSVdYKHTNRUUNLI5hqyXhrw3q4YYRj1yQpjR2sqXU7Zoo4HU1XCAXQueHAg+IcOoz6Ki2+9as1rLW0tPXU9HSxxF8zY48AsORtHVxPB8QtbsdmadTuHQSUbyPXlqRadwq/SUjDbcatX6/adm7VJqe5TUtVZ2NZDK+KRzKouOWkjgbB1I/NSUXaIIdOG5Xa3Pp6p9Q6GGjBOZMBp3ZcBxz1x4eKodkYyTtNjZI0OYbrPkOGejpD+oUx2zRTC+W+V2e5dSlsZxwHbve/LanKdbXbpcE5qYteY2wao1tWag06+mqrJJTQyysdFUtc50bi12SMloGfopzsipY6uxXCOXOBVhwI4IOwf4/VYdQy083Y9bjBtIZHSxux1DxgOB9c5W72L/9HuPP/cj/AIhPacvH4lorGtWX2ipI6OPu4s4zkklbK4XKt8cREQEREBERAREQFhq6aCrgfT1MLJoZGlr2PGQ4eqzIgrlg0ha7BX1FZbY5GOmYGbHP3Bgzn3c8jP18FG3bs3stwrXVkTqqime/vHGmkAG7OcjIODnnhXQhMLmmsZ8sW5Radqbdezmz3PunyTVjKhkbWPnbLufLgYy8uByfVaVR2W2+pdvqbzeJ3hu0Omla8gDoAS3or/hMJqFR1WaI1FlZ1Do+lv8AR0NNW1lU0Uedr49oL8gDnIx4eAVW1VV2bTVng0lVRVdwY9neB75Gx9yN3B3AeYPgvTznChNQ6WtWogz9pU+6SMYjmjcWPaPLI6j0OQkwrDn1MRkmeMfX2oOotJQWTTr7hbdS3FpiYHMhNWNj/wCVu3byfDC3Ozyqn1XZ7laL9vraaLYWyyuO8Zzxu65GMg9VJN7KrFlofUV7mNPDDMAPybx9lbLNZqCyUgpbZTMgizuIBJLj5knkn1K5ru3y9VScXGJmbb8+NKlD2W2JhmLpKyQvBDNz2/h58Rxz98rdsWgbdZjVBlRU1UNXF3M8NRsLXt+zQrei7qHmt1Oa0TE2nupVL2b2qiuTK6irLjBseHd1HPhrh8pONxB8RldansytD601dFVV9veSXD2SUN2H+U4yPoFd8JhNQfJzb3yUa39mtBb7pBcYrncX1EMneAyOY7c45zu93Jzk/wB1Zb/YqC/0Pslxh3sB3MeOHMPm0+ClMImk2z5LWi0z3hRKfsxtcNBV0ft1e9tS5hLi5gLNpzx7uOeM5HgpvSml4NMRTxUlVUzxzODnNm28EDHGAFYEXdQXz5bxMWnyLlERkIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIg//Z",
+            "asset_class": 2,
+            "esg_concern": [3, 4, 1, 7],
+            "industry": 4,
+            "country": 11,
+            "issuer": 8
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 20,
+        "fields": {
+            "name": "iShares ESG U.S. Aggregate Bond ETF",
+            "esg_rating": 8,
+            "asset_rating": "AA",
+            "is_index": "False",
+            "image_url": "https://data.bloomberglp.com/company/sites/51/2019/08/og-image-generic-lp.png",
+            "asset_class": 2,
+            "esg_concern": [7, 1, 2, 6],
+            "industry": 5,
+            "country": 11,
+            "issuer": 11
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 21,
+        "fields": {
+            "name": "BlackRock Enhanced Equity Dividend Fund",
+            "esg_rating": -4,
+            "asset_rating": "AAA",
+            "is_index": "False",
+            "image_url": "data:image/png;base64,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",
+            "asset_class": 1,
+            "esg_concern": [1, 3, 4, 7],
+            "industry": 4,
+            "country": 13,
+            "issuer": 10
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Fund",
+        "pk": 22,
+        "fields": {
+            "name": "BlackRock Innovation and Growth Trust",
+            "esg_rating": 9,
+            "asset_rating": "AAA",
+            "is_index": "False",
+            "image_url": "data:image/png;base64,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",
+            "asset_class": 2,
+            "esg_concern": [1, 4, 3],
+            "industry": 5,
+            "country": 11,
+            "issuer": 10
+        }
     }
 ]
