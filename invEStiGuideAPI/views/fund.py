@@ -8,7 +8,7 @@ from invEStiGuideAPI.serializers.fund_serializer import FundSerializer
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import status
 from rest_framework.decorators import action
-from invEStiGuideAPI.serializers.recommednation_serializer import RecommendationSerializer
+from invEStiGuideAPI.serializers.recommendation_serializer import RecommendationSerializer
 from invEStiGuideAPI.serializers.watched_serializer import WatchListSerializer
 from django.contrib.auth.models import User
 from django.db.models import Q
@@ -132,7 +132,8 @@ class FundView(ViewSet):
             if request.method == "POST":
                 fund = Fund.objects.get(pk=request.data['fundId'])
                 recommendee = User.objects.get(pk=request.data['user'])
-                recommendation = Recommendation.objects.create(
+                # HELP: Did returning the _ allow the get_or_create to work? Do I need to add any context for when recommendation.DoesNotExist
+                recommendation, _ = Recommendation.objects.get_or_create(
                     note=request.data['note'],
                     fund=fund,
                     recommender=request.auth.user,
