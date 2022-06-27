@@ -124,15 +124,13 @@ class FundView(ViewSet):
         serializer = RecommendationSerializer(recs, many=True)
         return Response(serializer.data)
     
-        # HELP: How can I solve for the case where a user is trying to recommend a fund to a user they have already recommended that fund to?
-    # Recommend or unrecommend a fund
+    # Recommend a fund
     @action(methods=['POST'], detail=False)
     def rec(self, request):
         try:
             if request.method == "POST":
                 fund = Fund.objects.get(pk=request.data['fundId'])
                 recommendee = User.objects.get(pk=request.data['user'])
-                # HELP: Did returning the _ allow the get_or_create to work? Do I need to add any context for when recommendation.DoesNotExist
                 recommendation, _ = Recommendation.objects.get_or_create(
                     note=request.data['note'],
                     fund=fund,
@@ -142,20 +140,4 @@ class FundView(ViewSet):
                 serializer = RecommendationSerializer(recommendation)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except (Fund.DoesNotExist, User.DoesNotExist) as ex:
-            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        
-    @action(methods=['DELETE'], detail=True)
-    def unrec(self, request, pk):
-        """Add or remove a recommendation for a fund to another user
-        
-        - The request must specify which fund (PK), target an existing user (username), and carry a string (note)
-        """
-        
-        try:
-            fund = Fund.objects.get(pk=pk)
-            recommendation = Recommendation.objects.get(pk=pk)
-            recommendation.delete()
-                
-            return Response(None, status=status.HTTP_204_NO_CONTENT)
-        except (Fund.DoesNotExist) as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
