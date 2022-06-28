@@ -1,5 +1,3 @@
-<!-- README
-HELP: How can I get my linter working?
-HELP: How can I get multiple query params to work simultaneously? A filtered search or multiple filters...
+# Better Portfolios
 
-DESCRIPTION: This app will make it easier for investment professionals to find ESG securities that fit their portfolio's needs. -->
+This is the server side half of the BP project, more instructions can be found in the [client side repo.](https://github.com/LaudenEller/Final-Capstone-Client)
