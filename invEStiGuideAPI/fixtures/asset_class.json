@@ -3,14 +3,14 @@
         "model": "invEStiGuideAPI.Asset_Class",
         "pk": 1,
         "fields": {
-            "AClass": "fixed_income"
+            "aclass": "fixed_income"
         }
     },
     {
         "model": "invEStiGuideAPI.Asset_Class",
         "pk": 2,
         "fields": {
-            "AClass": "equity"
+            "aclass": "equity"
         }
     }
 ]
