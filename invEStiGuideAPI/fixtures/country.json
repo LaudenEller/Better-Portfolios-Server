@@ -82,5 +82,12 @@
         "fields": {
             "country": "India"
         }
+    },
+    {
+        "model": "invEStiGuideAPI.Country",
+        "pk": 13,
+        "fields": {
+            "country": "Global"
+        }
     }
 ]

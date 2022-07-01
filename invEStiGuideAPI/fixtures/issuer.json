@@ -88,5 +88,23 @@
             "country": 11,
             "image_url": "data:image/png;base64,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"
         }
+    },
+    {
+        "model": "invEStiGuideAPI.Issuer",
+        "pk": 11,
+        "fields": {
+            "name": "Bloomberg",
+            "country": 13,
+            "image_url": "https://data.bloomberglp.com/company/sites/51/2019/08/og-image-generic-lp.png"
+        }
+    },
+    {
+        "model": "invEStiGuideAPI.Issuer",
+        "pk": 12,
+        "fields": {
+            "name": "MSCI",
+            "country": 11,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/MSCI_logo_2019.png"
+        }
     }
 ]
