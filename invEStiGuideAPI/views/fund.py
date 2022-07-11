@@ -25,9 +25,9 @@ class FundView(ViewSet):
         
         #  asset_classes // query string = "/funds?assetclass=<asset_class id>"
         funds = Fund.objects.all()
-        asset_class = request.query_params.get('assetclass', None)
-        if asset_class is not None:
-            funds = funds.filter(asset_class_id=asset_class)
+        aclass = request.query_params.get('assetclass', None)
+        if aclass is not None:
+            funds = funds.filter(asset_class_id=aclass)
                     
         # countries // query string = "/funds?country=<country id>"
         country = request.query_params.get('country', None)

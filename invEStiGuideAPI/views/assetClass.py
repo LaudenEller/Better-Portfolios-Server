@@ -8,7 +8,7 @@ from invEStiGuideAPI.serializers.asset_class_serializer import AssetClassSeriali
 class AssetView(ViewSet):
     
     def list(self, request):
-        """Get all asset_classs"""
+        """Get all asset_classes"""
         try:
             assetClasses = Asset_Class.objects.all()
             serializer = AssetClassSerializer(assetClasses, many=True)
