@@ -5,7 +5,7 @@ class FundSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fund
         fields = (
-            'id', 'name', 'asset_class', 'industry', 
+            'id', 'name', 'aclass', 'industry', 
             'country', 'issuer', 'esg_concern', 'esg_rating', 
             'asset_rating', 'image_url', 'is_index'
             )

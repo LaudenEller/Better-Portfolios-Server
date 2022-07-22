@@ -5,6 +5,9 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework  import status
+from django.contrib.auth.forms import UserCreationForm
+
+
 
 #  HELP: How is this decorator working? What class is login_user a method of...?
 @api_view(['POST']) # Only accepts POST requests to this method
@@ -21,7 +24,7 @@ def login_user(request):
     authenticated_user = authenticate(username=username, password=password)
 
     if authenticated_user is not None:
-        token = Token.objects.get(user=authenticated_user)
+        token = Token.objects.get(user=authenticated_user) # HELP: Tokens are not kept in the Postgres db, so how can I get them from Heroku instead?
         data = {
             'valid': True,
             'token': token.key
@@ -33,7 +36,7 @@ def login_user(request):
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register_user(request):
-    '''Handles the creation of a new gamer for authentication
+    '''Handles the creation of a new user for authentication
 
     Method arguments:
       request -- The full HTTP request object
@@ -47,7 +50,7 @@ def register_user(request):
         last_name=request.data['last_name']
     )
     
-    token = Token.objects.create(user=new_user)
+    token = Token.objects.create(user=new_user) # HELP: Tokens are not kept in the Postgres db, so how can I get them from Heroku instead?
     data = { 'token': token.key }
     
     return Response(data, status=status.HTTP_201_CREATED)

@@ -1,4 +1,4 @@
-from .asset_class import AssetClass
+from .asset_class import Asset_Class
 from .country import Country
 from .esg_concern import ESG_Concern
 from .favorite import Favorite

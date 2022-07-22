@@ -23,8 +23,9 @@ class FundView(ViewSet):
             Response -- JSON serialized list of funds
         """
         
-        #  asset_classes // query string = "/funds?assetclass=<asset_class id>"
         funds = Fund.objects.all()
+        
+        #  asset_classes // query string = "/funds?assetclass=<asset_class id>"
         asset_class = request.query_params.get('assetclass', None)
         if asset_class is not None:
             funds = funds.filter(asset_class_id=asset_class)

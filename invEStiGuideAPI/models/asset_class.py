@@ -1,6 +1,5 @@
 from django.db import models
-from django.forms import CharField
 
-class AssetClass(models.Model):
+class Asset_Class(models.Model):
    
-   asset_class = models.CharField(max_length=200)
+   aclass = models.CharField(max_length=200)
